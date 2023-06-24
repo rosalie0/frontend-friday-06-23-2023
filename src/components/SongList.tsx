@@ -27,8 +27,8 @@ export default function SongList({ songs }: SongListProps) {
   };
 
   return (
-    <div className="bg-black">
-      <div className="flex items-center justify-between mx-4">
+    <div className="bg-black px-10">
+      <div className="flex items-center justify-between py-4">
         <button className="bg-black font-bold border border-white rounded-md py-2 px-4 h-12">
           Follow
         </button>
