@@ -1,6 +1,6 @@
 import { Playlist } from "../../dummyData/types";
 import BackSmall from "../assets/Back Small.png";
-import BackMedium from "../assets/Back Medium.png";
+//import BackMedium from "../assets/Back Medium.png";
 
 interface PlaylistBannerProps {
   playlist: Playlist;
@@ -27,3 +27,4 @@ export default function PlaylistBanner({ playlist }: PlaylistBannerProps) {
     </div>
   );
 }
+//

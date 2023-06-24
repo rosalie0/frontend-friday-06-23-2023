@@ -2,8 +2,8 @@ import { Song } from "../../dummyData/types";
 import SongComponent from "./SongComponent";
 import PlayButtonSmall from "../assets/Play Button Small.png";
 import PauseButtonSmall from "../assets/Pause Button Small.png";
-import PlayButtonMedium from "../assets/Play Button Medium.png";
-import PauseButtonMedium from "../assets/Pause Button Medium.png";
+//import PlayButtonMedium from "../assets/Play Button Medium.png";
+//import PauseButtonMedium from "../assets/Pause Button Medium.png";
 
 import ShuffleUnselectedSmall from "../assets/Shuffle Unselected Small.svg";
 import ShuffleSelectedSmall from "../assets/Shuffle Selected Small.svg";

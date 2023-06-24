@@ -3,7 +3,7 @@ import HeartFilledSmall from "../assets/Heart Filled Small.png";
 import HeartUnfilledSmall from "../assets/Heart Unfilled Small.png";
 
 import SeeMore from "../assets/see-more.png";
-import SeeMoreMedium from "../assets/see-more Medium.png";
+//import SeeMoreMedium from "../assets/see-more Medium.png";
 import { useState } from "react";
 
 interface SongProps {
