@@ -26,17 +26,39 @@ export default function SongList({ songs }: SongListProps) {
       setShuffleImage(ShuffleUnselectedMedium);
   };
 
+  const [play, setPlay] = useState(PlayButtonSmall);
+  const playToggle = () => {
+    if (play === PlayButtonSmall) setPlay(PauseButtonSmall);
+    if (play === PauseButtonSmall) setPlay(PlayButtonSmall);
+  };
+
+  const [followText, setFollowText] = useState("Follow");
+  const isFollowingClassName =
+    "bg-white text-black font-bold border border-white rounded-md py-2 px-4 h-12";
+  const notFollowingClassName =
+    "bg-black text-white font-bold border border-white rounded-md py-2 px-4 h-12";
+  const [follow, setFollow] = useState(notFollowingClassName);
+  const toggleFollow = () => {
+    if (follow === notFollowingClassName) {
+      setFollow(isFollowingClassName);
+      setFollowText("Following");
+    } else {
+      setFollow(notFollowingClassName);
+      setFollowText("Follow");
+    }
+  };
+
   return (
-    <div className="bg-black px-10">
+    <div className="bg-black pl-10 pr-6">
       <div className="flex items-center justify-between py-4">
-        <button className="bg-black font-bold border border-white rounded-md py-2 px-4 h-12">
-          Follow
+        <button onClick={toggleFollow} className={follow}>
+          {followText}
         </button>
         <div className="flex items-center gap-4">
           <div className="cursor-pointer" onClick={toggleShuffleImage}>
             <img src={shuffleImage} />
           </div>
-          <img src={PlayButtonSmall} />
+          <img className="cursor-pointer" onClick={playToggle} src={play} />
         </div>
       </div>
       <h2 className="font-bold">Popular</h2>
