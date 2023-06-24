@@ -10,7 +10,7 @@ export default function PlaylistComponent({
   playlist,
 }: PlaylistComponentProps) {
   return (
-    <div>
+    <div className="text-white">
       <PlaylistBanner playlist={playlist} />
       <SongList songs={playlist.songs} />
     </div>
