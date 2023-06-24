@@ -1,5 +1,15 @@
-import React from "react";
+import { Playlist } from "../../dummyData/types";
 
-export default function PlaylistBanner() {
-  return <div>PlaylistBanner</div>;
+interface PlaylistBannerProps {
+  playlist: Playlist;
+}
+
+export default function PlaylistBanner({ playlist }: PlaylistBannerProps) {
+  return (
+    <div>
+      <img src={playlist.image} />
+      <h1>{playlist.title}</h1>
+      <p>{playlist.monthlyListenerCount} monthly listeners</p>
+    </div>
+  );
 }
